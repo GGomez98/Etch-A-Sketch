@@ -3,10 +3,23 @@
     margin: 0;
 }
 
+body{
+    display: flex;
+    justify-content: center;
+}
+
 #container{
-    border: black solid 1px;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;   
+}
+
+#main-container{
     width: 600px;
     height: 600px;
     display: flex;
     flex-wrap: wrap;
+    border: black solid 1px;
+    margin-top: 150px;
 }

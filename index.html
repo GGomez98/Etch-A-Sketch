@@ -8,18 +8,24 @@
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 <body>
-    <div id="container"></div>
+    <div id="main-container">
+        <div id="container"></div>
+    </div>
 </body>
 <script>
     const container = document.querySelector('#container');
-    
+    let block = document.querySelectorAll('.block');
+
+    container.addEventListener('mouseover', (e)=>{
+        e.target.style.backgroundColor = 'black'
+    })
 
     function createGrid(number){
     let cells = number*number;
         for (var i = 0; i<cells; i++){
             let block = document.createElement('div')
             container.appendChild(block);
-            block.style.border = 'black solid 1px';
+            block.style.border = 'grey solid 1px';
             block.style.height = `${600/number-2}px`
             block.style.width = `${600/number-2}px`
             block.classList.add('block')
