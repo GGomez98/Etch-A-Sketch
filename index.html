@@ -13,19 +13,30 @@
 <script>
     const container = document.querySelector('#container');
     
+
     function createGrid(number){
-    var cells = number*number;
+    let cells = number*number;
         for (var i = 0; i<cells; i++){
-            var block = document.createElement('div')
+            let block = document.createElement('div')
             container.appendChild(block);
             block.style.border = 'black solid 1px';
             block.style.height = `${600/number-2}px`
             block.style.width = `${600/number-2}px`
+            block.classList.add('block')
         }
     }
 
     function defaultGrid(){
         createGrid (16)
+    }
+
+    function newGrid(){
+        let block = document.querySelectorAll('.block');
+        block.forEach(block => {
+            block.remove();
+        });
+        let number = prompt('write a number')
+        createGrid(number)
     }
 
     defaultGrid();
