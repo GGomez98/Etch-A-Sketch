@@ -8,15 +8,21 @@
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 <body>
-    <div id="main-container">
-        <div id="container"></div>
+    <div id="main container">
+        <div id="control-panel">
+            <button id="reset-button">Reset</button>
+        </div>
+        <div id="border">
+            <div id="container"></div>
+        </div>
     </div>
 </body>
 <script>
-    const container = document.querySelector('#container');
-    let block = document.querySelectorAll('.block');
+    const container = document.getElementById('container');
+    const block = document.querySelectorAll('.block');
+    const button = document.getElementById('button');
 
-    container.addEventListener('mouseover', (e)=>{
+    container.addEventListener('mouseover',(e)=>{
         e.target.style.backgroundColor = 'black'
     })
 

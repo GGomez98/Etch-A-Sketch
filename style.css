@@ -15,11 +15,10 @@ body{
     flex-wrap: wrap;   
 }
 
-#main-container{
+#border{
     width: 600px;
     height: 600px;
     display: flex;
     flex-wrap: wrap;
     border: black solid 1px;
-    margin-top: 150px;
 }
