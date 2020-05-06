@@ -20,7 +20,11 @@
 <script>
     const container = document.getElementById('container');
     const block = document.querySelectorAll('.block');
-    const button = document.getElementById('button');
+    const button = document.getElementById('reset-button');
+
+    button.addEventListener('click', (e)=>{
+        newGrid();
+    })
 
     container.addEventListener('mouseover',(e)=>{
         e.target.style.backgroundColor = 'black'
