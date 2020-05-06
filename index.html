@@ -9,8 +9,10 @@
 </head>
 <body>
     <div id="main container">
+        <h1>Etch-A-Sketch</h1>
         <div id="control-panel">
             <button id="reset-button">Reset</button>
+            <button id="clean-button">Clean</button>
         </div>
         <div id="border">
             <div id="container"></div>
@@ -20,9 +22,14 @@
 <script>
     const container = document.getElementById('container');
     const block = document.querySelectorAll('.block');
-    const button = document.getElementById('reset-button');
+    const resetButton = document.getElementById('reset-button');
+    const cleanButton = document.getElementById('clean-button');
 
-    button.addEventListener('click', (e)=>{
+    cleanButton.addEventListener('click', (e)=>{
+        cleanGrid()
+    })
+
+    resetButton.addEventListener('click', (e)=>{
         newGrid();
     })
 
@@ -53,6 +60,13 @@
         });
         let number = prompt('write a number')
         createGrid(number)
+    }
+
+    function cleanGrid(){
+        let block = document.querySelectorAll('.block');
+        block.forEach(block => {
+            block.style.backgroundColor = "white";
+        });
     }
 
     defaultGrid();

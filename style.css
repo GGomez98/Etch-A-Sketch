@@ -26,3 +26,9 @@ body{
 .block{
     border: 1px solid rgba(100, 100, 100, 0.5);
 }
+
+#control-panel{
+    border: black solid 1px;
+    display: flex;
+    height: 12%;
+}
