@@ -22,3 +22,7 @@ body{
     flex-wrap: wrap;
     border: black solid 1px;
 }
+
+.block{
+    border: 1px solid rgba(100, 100, 100, 0.5);
+}
