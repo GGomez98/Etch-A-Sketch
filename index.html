@@ -9,21 +9,24 @@
 </head>
 <body>
     <div id="main-container">
-        <h1 id="title">Etch-A-Sketch</h1>
+        <div>
+            <h1 id="title">Etch-A-Sketch</h1>
+        </div>
         <div id="control-panel">
             <button class="button" id="reset-button">Reset</button>
             <button class="button" id="clean-button">Clean</button>
-            <div id="color-buttons">
-                <button class="color" id="black"></button>
-                <button class="color" id="green"></button>
+                <div id="color-buttons">
+                    <button class="color" id="black"></button>
+                    <button class="color" id="green"></button>
                 <button class="color" id="blue"></button>
                 <button class="color" id="red"></button>
-            </div>
+                </div>
         </div>
         <div id="border">
             <div id="container"></div>
         </div>
     </div>
+    <footer>Developed by Gastón Gómez</footer>
 </body>
 
 <script>
@@ -63,7 +66,8 @@
             block.style.border = '1px gray solid;';
             block.style.height = `${600/number-2}px`
             block.style.width = `${600/number-2}px`
-            block.classList.add('block')
+            block.classList.add('block');
+            block.style.backgroundColor = 'white';
         }
     }
 
