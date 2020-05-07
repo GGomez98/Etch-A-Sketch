@@ -13,6 +13,12 @@
         <div id="control-panel">
             <button class="button" id="reset-button">Reset</button>
             <button class="button" id="clean-button">Clean</button>
+            <select id="select">
+                <option class="option" id="black">Black</option>
+                <option class="option" id="red">Red</option>
+                <option class="option" id="green">Green</option>
+                <option class="option" id="blue">Blue</option>
+            </select>
         </div>
         <div id="border">
             <div id="container"></div>
@@ -25,6 +31,7 @@
     const block = document.querySelectorAll('.block');
     const resetButton = document.getElementById('reset-button');
     const cleanButton = document.getElementById('clean-button');
+    const options = document.querySelectorAll('.option');
 
     cleanButton.addEventListener('click', (e)=>{
         cleanGrid()
@@ -33,11 +40,7 @@
     resetButton.addEventListener('click', (e)=>{
         newGrid();
     })
-
-    container.addEventListener('mouseover',(e)=>{
-        e.target.style.backgroundColor = 'black'
-    })
-
+    
     function createGrid(number){
     let cells = number*number;
         for (var i = 0; i<cells; i++){
@@ -72,6 +75,29 @@
 
         else {
             alert('Your number is higher than 150'); 
+        }
+    }
+
+    function selectColor(option){
+        if (option == 'red'){
+            container.addEventListener('mouseover',(e)=>{
+        e.target.style.backgroundColor = 'red';
+    })
+        }
+        else if (option == 'green'){
+            container.addEventListener('mouseover',(e)=>{
+        e.target.style.backgroundColor = 'green';
+    })
+        }
+        else if (option == 'blue'){
+            container.addEventListener('mouseover',(e)=>{
+        e.target.style.backgroundColor = 'blue';
+    })
+        }
+        else{
+            container.addEventListener('mouseover', (e)=>{
+                e.target.style.backgroundColor = 'black'
+            })
         }
     }
 
