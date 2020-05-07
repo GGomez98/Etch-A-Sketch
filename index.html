@@ -6,7 +6,6 @@
     <title>Etch-A-Sketch</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="main-container">
@@ -56,12 +55,24 @@
     }
 
     function newGrid(){
+       
+        let number = prompt('write a number between 1 and 150');
+
+        if (number>0 && number<=150){
         let block = document.querySelectorAll('.block');
         block.forEach(block => {
             block.remove();
         });
-        let number = prompt('write a number')
-        createGrid(number)
+        createGrid(number);
+        }
+
+        else if (number<= 0){
+            alert('Your number is lower or equal to 0');
+        }
+
+        else {
+            alert('Your number is higher than 150'); 
+        }
     }
 
     function cleanGrid(){
