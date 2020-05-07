@@ -8,6 +8,8 @@
 body{
     display: flex;
     justify-content: center;
+    background-color: teal;
+    flex-wrap: wrap;
 }
 
 #container{
@@ -35,15 +37,26 @@ body{
     height: 12%;
     align-items: center;
     justify-content: space-evenly;
+    border-bottom: none;
+    background-color: turquoise;
 }
 
 .button{
     width: 30%;
     height: 70%;
+    font-size: 20px;
+    background-color:hsl(180, 100%, 25%);
+    border:hsl(180, 100%, 25%);
+    color: white;
 }
 
 #title{
     text-align: center;
+    background-color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border: 1px solid black;
+    border-bottom: none;
 }
 
 #main-container{
@@ -65,21 +78,130 @@ body{
 }
 
 #black{
-    background-color: black;
-    border: black;
+    background-color: hsl(0, 0%, 0%);
+    border: hsl(0, 0%, 0%);
 }
 
 #red{
-    background-color: red;
-    border: red;
+    background-color: hsl(1, 100%, 50%);
+    border: hsl(1, 100%, 50%);
 }
 
 #green{
-    background-color: green;
-    border: green;
+    background-color: hsl(100, 100%, 40%);
+    border: hsl(100, 100%, 40%);
 }
 
 #blue{
-    background-color: blue;
-    border: blue;
+    background-color: hsl(231, 100%, 50%);
+    border: hsl(231, 100%, 50%);
+}
+
+#black:hover{
+    animation-name: black-button;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+#red:hover{
+    animation-name: red-button;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+#green:hover{
+    animation-name: green-button;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+#blue:hover{
+    animation-name: blue-button;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+.button:hover{
+    animation-name: button;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+button{
+    cursor: pointer;
+    font-family: Bangers;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+@keyframes black-button{
+    0%{
+    background-color: hsl(0, 0%, 0%);
+    border: hsl(0, 0%, 0%);
+    }
+    100%{
+    background-color: hsl(0, 0%, 20%);
+    border: hsl(0, 0%, 20%);
+    }
+}
+@keyframes red-button{
+    0%{
+    background-color: hsl(1, 100%, 50%);
+    border: hsl(1, 100%, 50%);   
+    }
+    100%{
+    background-color: hsl(1, 100%, 70%);
+    border: hsl(1, 100%, 70%);
+    }
+}
+@keyframes green-button{
+    0%{
+    background-color: hsl(100, 100%, 40%);
+    border: hsl(100, 100%, 40%);   
+    }
+    100%{
+    background-color: hsl(100, 100%, 60%);
+    border: hsl(100, 100%, 60%);
+    }
+}
+@keyframes blue-button{
+    0%{
+    background-color: hsl(231, 100%, 50%);
+    border: hsl(231, 100%, 50%);   
+    }
+    100%{
+    background-color: hsl(231, 100%, 70%);
+    border: hsl(231, 100%, 70%);
+    }
+}
+@keyframes button{
+    0%{
+    background-color: hsl(180, 100%, 25%);
+    border: hsl(180, 100%, 25%);
+    }
+    100%{
+    background-color: hsl(180, 100%, 35%);
+    border: hsl(180, 100%, 35%);     
+    }
+}
+
+@media (max-width: 1280px) and (max-height: 800px){
+    #main-container{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 1440px) and (max-height: 9000px){
+    #main-container{
+        margin-top: 70px;
+    }
 }
