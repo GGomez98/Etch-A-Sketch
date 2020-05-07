@@ -31,4 +31,5 @@ body{
     border: black solid 1px;
     display: flex;
     height: 12%;
+    align-items: center;
 }
